@@ -1,30 +1,26 @@
-<%--
-    Document   : categoria
-    Created on : 12-mar-2014, 16:48:46
-    Author     : Administrador
---%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<%@page errorPage="../error.jsp" contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
 
-<jsp:include page="header.jsp"></jsp:include>
+   
+
+
+    
 
 
             <div id="categoryLeftColumn">
                 <div class="categoryButton" id="selectedCategory">
-                    <span class="categoryText">Cat 1</span>
+                    <span class="categoryText">Cat 1  ${categoria.nombre}</span>
                 </div>
 
-                <a href="#" class="categoryButton">
+                <a href="category" class="categoryButton">
                     <span class="categoryText">Cat 2</span>
                 </a>
 
-                <a href="#" class="categoryButton">
+                <a href="category" class="categoryButton">
                     <span class="categoryText">Cat 3</span>
                 </a>
 
-                <a href="#" class="categoryButton">
+                <a href="category" class="categoryButton">
                     <span class="categoryText">Cat 4</span>
                 </a>
             </div>
@@ -44,7 +40,7 @@
                         </td>
                         <td class="lightBlue">[ precio ]</td>
                         <td class="lightBlue">
-                            <form action="#" method="post">
+                            <form action="addToCart" method="post">
                                 <input type="submit" value="comprar">
                             </form>
                         </td>
@@ -61,7 +57,7 @@
                         </td>
                         <td class="white">[ precio ]</td>
                         <td class="white">
-                            <form action="#" method="post">
+                            <form action="addToCart" method="post">
                                 <input type="submit" value="comprar">
                             </form>
                         </td>
@@ -78,7 +74,7 @@
                         </td>
                         <td class="lightBlue">[ precio ]</td>
                         <td class="lightBlue">
-                            <form action="#" method="post">
+                            <form action="addToCart" method="post">
                                 <input type="submit" value="comprar">
                             </form>
                         </td>
@@ -95,7 +91,7 @@
                         </td>
                         <td class="white">[ precio ]</td>
                         <td class="white">
-                            <form action="#" method="post">
+                            <form action="addToCart" method="post">
                                 <input type="submit" value="Comprar">
                             </form>
                         </td>
@@ -103,5 +99,5 @@
                 </table>
             </div>
     
-<jsp:include page="footer.jsp"></jsp:include>
+
          

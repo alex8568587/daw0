@@ -1,14 +1,4 @@
-<%--
-    Document   : verificar
-    Created on : 12-mar-2014, 16:48:46
-    Author     : Administrador
---%>
 
-<%@page errorPage="../error.jsp" contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-
-<jsp:include page="header.jsp"></jsp:include>
 
 
  <div id="singleColumn">
@@ -17,7 +7,7 @@
 
         <p>Para comprar los productos de tu carrito de la compra, necesitamos la siguiente informacion:</p>
 
-        <form action="#" method="post">
+        <form action="purchase" method="post">
             <table id="checkoutTable">
                 <tr>
                     <td><label for="nombre">Nombre</label></td>
@@ -108,5 +98,5 @@
         </table>
     </div>
 </div>
-<jsp:include page="footer.jsp"></jsp:include>
+
            

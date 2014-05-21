@@ -1,51 +1,57 @@
-<%-- 
-    Document   : index
-    Created on : 12-mar-2014, 16:48:46
-    Author     : Administrador
---%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<%@page errorPage="WEB-INF/error.jsp" contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
 
-<jsp:include page="header.jsp"></jsp:include>
+
+
+
 
     <div id="indexLeftColumn">
         <div id="welcomeText">
-            <p>[ mensaje de bienvenida ]</p>
-            
+            <p>Hello! </p>
+            <p>test ${initParam.categoriasImagenesPath}</p>
             
         </div>
     </div>
 
     <div id="indexRightColumn">
-        <div class="categoryBox">
-            <a href="#">
-                 <span class="categoryLabel"></span>
-                <span class="categoryLabelText">Cat1</span>
+        
+        <c:forEach var="categoria" items="${categorias}">
+            
+            <div class="categoryBox">
+            <!-- pasar el id de la category en la href-->
+            <a href="category?categoryId=${categoria.id}">
+                <span class="categoryLabel">${categoria.id}</span>
+                <span class="categoryLabelText">${categoria.nombre}</span>
+                <img src="${initParam.categoriasImagenesPath}/${categoria.imagen}"
+                     alt="${categoria.nombre}">
             </a>
         </div>
-        <div class="categoryBox">
-            <a href="#">
+            
+            
+        </c:forEach>
+        
+        
+        <!--div class="categoryBox">
+            <a href="category">
                  <span class="categoryLabel"></span>
                 <span class="categoryLabelText">Cat2</span>
             </a>
         </div>
         <div class="categoryBox">
-            <a href="#">
+            <a href="category">
                  <span class="categoryLabel"></span>
                 <span class="categoryLabelText">Cat3</span>
             </a>
         </div>
         <div class="categoryBox">
-            <a href="#">
+            <a href="category">
                  <span class="categoryLabel"></span>
                 <span class="categoryLabelText">Cat4</span>
             </a>
-        </div>
+        </div-->
     </div>
     
-<jsp:include page="footer.jsp"></jsp:include>
+
 
 
 
